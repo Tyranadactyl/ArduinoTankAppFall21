@@ -5,27 +5,28 @@ import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 
 public class MainActivity extends AppCompatActivity {
 
-    Button left;
-    Button right;
-    Button forward;
-    Button reverse;
-    TextView txtDisplay;
+    Button left = findViewById(R.id.leftButton);
+    Button right = findViewById(R.id.rightButton);
+    Button forward = findViewById(R.id.fwdButton);
+    Button reverse = findViewById(R.id.revButton);
+    TextView txtDisplay = findViewById(R.id.mainTextDisplay);
+
+    EditText tankIp = findViewById(R.id.ipInput);
+
+    public void onSubmit(View v) {
+        CharSequence ip = tankIp.getText();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        left = findViewById(R.id.leftButton);
-        right = findViewById(R.id.rightButton);
-        forward = findViewById(R.id.fwdButton);
-        reverse = findViewById(R.id.revButton);
-        txtDisplay = findViewById(R.id.mainTextDisplay);
 
         forward.setOnTouchListener(new View.OnTouchListener() {
             @Override

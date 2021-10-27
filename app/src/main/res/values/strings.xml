@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">ArduinoTankApp</string>
+    <string name="direction">Direction</string>
+    <string name="forward">Forward</string>
+    <string name="reverse">Reverse</string>
+    <string name="left">Left</string>
+    <string name="right">Right</string>
+    <string name="tank_ip_address">Tank IP Address</string>
+    <string name="find_tank">Find Tank</string>
+    <string name="current_ip">Current IP</string>
 </resources>

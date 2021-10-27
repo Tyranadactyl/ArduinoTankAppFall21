@@ -10,9 +10,9 @@
         android:id="@+id/mainTextDisplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="125dp"
         android:elegantTextHeight="true"
-        android:text="Sample Text"
+        android:text="@string/direction"
         android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -32,7 +32,7 @@
             android:id="@+id/fwdButton"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:text="Forward"
+            android:text="@string/forward"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -40,7 +40,7 @@
             android:id="@+id/revButton"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:text="Reverse"
+            android:text="@string/reverse"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -58,7 +58,7 @@
             android:id="@+id/leftButton"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:text="Left"
+            android:text="@string/left"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -66,9 +66,47 @@
             android:id="@+id/rightButton"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:text="Right"
+            android:text="@string/right"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ipInputCluster"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/ipInput"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@string/tank_ip_address"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/ipSubmit"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:onClick="onSubmit"
+            android:text="@string/find_tank"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:text="@string/current_ip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ipInputCluster" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
