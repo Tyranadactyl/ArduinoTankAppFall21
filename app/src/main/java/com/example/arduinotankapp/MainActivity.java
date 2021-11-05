@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     public void onSubmit(View v) {
         String ip = tankIp.getText().toString();
         ipDisplay.setText(ip);
-        tankAddress = ip; //trying this without the HTTP:// before hand because the app always says that the page isn't available
+        tankAddress = "HTTP://" + ip; //trying this without the HTTP:// before hand because the app always says that the page isn't available
         txtDisplay.setText("website address:" + tankAddress);
     }
 
