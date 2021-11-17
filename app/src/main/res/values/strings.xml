@@ -8,4 +8,5 @@
     <string name="tank_ip_address">Tank IP Address</string>
     <string name="find_tank">Find Tank</string>
     <string name="current_ip">Current IP</string>
+    <string name="set_ip">set IP</string>
 </resources>

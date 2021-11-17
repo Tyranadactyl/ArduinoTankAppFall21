@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#535353"
     tools:context=".MainActivity">
 
     <TextView
@@ -13,7 +14,6 @@
         android:layout_marginTop="125dp"
         android:layout_marginEnd="100dp"
         android:elegantTextHeight="true"
-        android:text="@string/direction"
         android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -30,17 +30,16 @@
 
     <WebView
         android:id="@+id/tankWebServer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/showIp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/MovementButtonCluster"
         android:layout_width="150dp"
-        android:layout_height="300dp"
+        android:layout_height="295dp"
         android:layout_marginStart="50dp"
         android:layout_marginBottom="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -48,17 +47,23 @@
 
         <Button
             android:id="@+id/fwdButton"
+            style="@style/Widget.AppCompat.Button"
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:text="@string/forward"
+            android:textColor="#212121"
+            app:backgroundTint="#8F8F8F"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/revButton"
+            style="@style/Widget.AppCompat.Button"
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:text="@string/reverse"
+            android:textColor="#212121"
+            app:backgroundTint="#8F8F8F"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -67,24 +72,30 @@
         android:id="@+id/TurningButtonCluster"
         android:layout_width="300dp"
         android:layout_height="150dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginBottom="75dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
         <Button
             android:id="@+id/leftButton"
+            style="@style/Widget.AppCompat.Button"
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:text="@string/left"
+            android:textColor="#212121"
+            app:backgroundTint="#8F8F8F"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/rightButton"
+            style="@style/Widget.AppCompat.Button"
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:text="@string/right"
+            android:textColor="#212121"
+            app:backgroundTint="#8F8F8F"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -103,9 +114,9 @@
             android:layout_width="250dp"
             android:layout_height="50dp"
             android:ems="10"
+            android:hint="@string/tank_ip_address"
             android:importantForAutofill="no"
             android:inputType="textPersonName"
-            android:text="@string/tank_ip_address"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -114,7 +125,9 @@
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:onClick="onSubmit"
-            android:text="@string/find_tank"
+            android:text="@string/set_ip"
+            android:textColor="#212121"
+            app:backgroundTint="#8F8F8F"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
